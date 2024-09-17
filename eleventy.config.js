@@ -1,4 +1,6 @@
-module.exports = function (eleventyConfig) {
+module.exports = function (eleventyConfig) 
+{
+  eleventyConfig.addWatchTarget("./src/scss/");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
   // Return your Object options:

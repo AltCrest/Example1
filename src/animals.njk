@@ -1,0 +1,20 @@
+---
+pagination:
+    data: animals
+    size: 4
+    alias: animal
+layout: layouts/default.njk
+title: Zoo
+---
+<h1>{{title}}</h1>
+<hr>
+
+{% for animal in pagination.items %}
+<p>
+    <strong>{{animal.first_name}}</strong> is a <strong>{{animal.animal}}</strong>.
+</p>
+{% endfor %}
+
+<hr>
+
+{% include "partials/pagination.njk" %}

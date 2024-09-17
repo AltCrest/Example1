@@ -1,0 +1,17 @@
+<nav aria-label="Animal Navigation">
+    <ul class="pagination">
+    {%- for pageEntry in pagination.pages %}
+        <li class="page-item">
+            <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+                {% if page.url == pagination.hrefs[ loop.index0 ] %}
+                    aria-current="page"
+                    class="page-link active"
+                {% else %}
+                    class="page-link"
+                {% endif %}>
+                    {{ loop.index }}
+            </a>
+        </li>
+    {%- endfor %}
+    </ul>
+</nav>
